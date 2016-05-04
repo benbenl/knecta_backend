@@ -2097,7 +2097,8 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  font-size:0.8em;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   padding: 8px;

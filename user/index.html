@@ -2,31 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title>Light Bootstrap Dashboard by Creative Tim</title>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <meta name="viewport" content="width=device-width" />
 
 <!-- Bootstrap core CSS     -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
 <!-- Animation library for notifications   -->
-<link href="assets/css/animate.min.css" rel="stylesheet"/>
-
-<!--  Light Bootstrap Table core CSS    -->
-<link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+<link href="../assets/css/animate.min.css" rel="stylesheet"/>
 
 <!--  Flat UI CSS    -->
-<link href="assets/css/flat-ui.css" rel="stylesheet"/>
+<link href="../assets/css/flat-ui.css" rel="stylesheet"/>
+
+<!--  Light Bootstrap Table core CSS    -->
+<link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
 
 <!--  CSS for Demo Purpose, don't include it in your project     -->
-<link href="assets/css/demo.css" rel="stylesheet" />
+<link href="../assets/css/demo.css" rel="stylesheet" />
 
 <!--     Fonts and icons     -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-<link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+<link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 <body>
   <div class="wrapper">
@@ -42,19 +43,19 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="dashboard.html">
+            <a href="../dashboard.html">
               <i class="pe-7s-users"></i>
               <p>Admin</p>
             </a>
           </li>
           <li class="active">
-            <a href="users.html">
+            <a href="../users.html">
               <i class="pe-7s-user"></i>
               <p>Users</p>
             </a>
           </li>
           <li>
-            <a href="content.html">
+            <a href="../content.html">
               <i class="pe-7s-note2"></i>
               <p>Content</p>
             </a>
@@ -183,7 +184,7 @@
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Tags</label>
-                          <select name="profile_interests" id="profile_interests" class="form-control">
+                          <select multiple name="profile_interests" id="profile_interests" class="form-control">
                             <option value="">Select</option>
                             <option value="networking">Networking</option>
                             <option value="foodie">Foodie</option>
@@ -195,6 +196,7 @@
                             <option value="professional">Professional</option>
                             <option value="nearby">Nearby</option>
                           </select>
+                          
                         </div>
                       </div>
                       <div class="col-md-3 col-sm-6">
@@ -215,7 +217,7 @@
           <div class="row ">
             <div class="col-sm-3">
             <div class="form-group">
-              <a class="btn btn-fill btn-primary btn-block" href="/en/user/create.html">
+              <a class="btn btn-primary btn-block btn-fill" href="/en/user/create.html">
                 <i class="pe-7s-plus"></i>&nbsp;Add User
               </a>
               </div>
@@ -234,7 +236,7 @@
               </a>
               </div>
             </div>
-            <div class="col-sm-offset-1 col-sm-2 col-md-offset-2 col-md-1">
+            <div class="col-sm-offset-1 col-sm-2">
               <select name="pageSize" id="pageSize-select" class="form-control">
                 <option value="25" selected="">25</option>
                 <option value="50">50</option>
@@ -263,6 +265,7 @@
                       
                       </thead>
                       <tbody>
+                      <!-- user entry -->
                       <tr>
                         <td>
                           <input type="checkbox" name="subBox[]" value="">
@@ -282,6 +285,8 @@
                             </a>
                         </td>
                       </tr>
+                      <!-- /user entry -->
+                      <!-- user entry -->
                       <tr>
                         <td>
                           <input class="userCheck" type="checkbox" name="subBox[]" value="30010">
@@ -302,6 +307,8 @@
                           
                         </td>
                       </tr>
+                      <!-- /user entry -->
+                      
                     </tbody>
                   </table>
                 </div>
@@ -335,74 +342,11 @@
               <li class="next"><a href="#fakelink" class="fui-arrow-right"></a></li>
             </ul>
             </div>
+            
           </div>
           </div>
 
               
-            </div>
-            <div class="col-md-12">
-              <div class="card card-plain">
-                <div class="header">
-                  <h4 class="title">Table on Plain Background</h4>
-                  <p class="category">Here is a subtitle for this table</p>
-                </div>
-                <div class="content table-responsive table-full-width">
-                  <table class="table table-hover">
-                    <thead>
-                    <th>ID</th>
-                      <th>Name</th>
-                      <th>Salary</th>
-                      <th>Country</th>
-                      <th>City</th>
-                      
-                        </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Dakota Rice</td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
-                        <td>Oud-Turnhout</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                        <td>Sinaai-Waas</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                        <td>Baileux</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
-                        <td>Overland Park</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>Doris Greene</td>
-                        <td>$63,542</td>
-                        <td>Malawi</td>
-                        <td>Feldkirchen in Kärnten</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Mason Porter</td>
-                        <td>$78,615</td>
-                        <td>Chile</td>
-                        <td>Gloucester</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -422,24 +366,24 @@
 </body>
 
 <!--   Core JS Files   -->
-<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 <!--  Checkbox, Radio & Switch Plugins -->
-<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+<script src="../assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 <!--  Charts Plugin -->
-<script src="assets/js/chartist.min.js"></script>
+<script src="../assets/js/chartist.min.js"></script>
 
 <!--  Notifications Plugin    -->
-<script src="assets/js/bootstrap-notify.js"></script>
+<script src="../assets/js/bootstrap-notify.js"></script>
 
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-<script src="assets/js/light-bootstrap-dashboard.js"></script>
+<script src="../assets/js/light-bootstrap-dashboard.js"></script>
 
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-<script src="assets/js/demo.js"></script>
+<script src="../assets/js/demo.js"></script>
 </html>
