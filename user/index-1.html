@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Light Bootstrap Dashboard PRO by Creative Tim</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+<!--  Social tags      -->
+<meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap dashboard, bootstrap, css3 dashboard, bootstrap admin, light bootstrap dashboard, frontend, responsive bootstrap dashboard">
+<meta name="description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Light Bootstrap Dashboard PRO by Creative Tim">
+<meta itemprop="description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
+<meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg">
+<!-- Twitter Card data -->
+
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Light Bootstrap Dashboard PRO by Creative Tim">
+<meta name="twitter:description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg">
+<meta name="twitter:data1" content="Light Bootstrap Dashboard PRO by Creative Tim">
+<meta name="twitter:label1" content="Product Type">
+<meta name="twitter:data2" content="$29">
+<meta name="twitter:label2" content="Price">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Light Bootstrap Dashboard PRO by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html" />
+<meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg"/>
+<meta property="og:description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful." />
+<meta property="og:site_name" content="Creative Tim" />
+
+<!-- Bootstrap core CSS     -->
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+
+<!--  Light Bootstrap Dashboard core CSS    -->
+<link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+<!--  CSS for Demo Purpose, don't include it in your project     -->
+<link href="../assets/css/demo.css" rel="stylesheet" />
+
+<!--     Fonts and icons     -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+<link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-5.jpg">
+      <!--
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
+      
+      <div class="logo">
+        <a href="http://manage.prod.knecta.net" class="logo-text">
+          Knecta
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="#">
+              <i class="pe-7s-users"></i>
+              <p>Admin</p>
+            </a>
+          </li>
+          <li class="active">
+            <a data-toggle="collapse" href="#componentsExamples">
+              <i class="pe-7s-user"></i>
+              <p>User <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="componentsExamples">
+              <ul class="nav">
+                <li class="active">
+                  <a href="#">
+                    User List
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Add User
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+              <i class="pe-7s-note2"></i>
+              <p>Content <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse in" id="formsExamples">
+              <ul class="nav">
+                <li>
+                  <a href="../examples/untitled folder/regular.html">
+                    Manage
+                  </a>
+                </li>
+                <li>
+                  <a href="../examples/forms/extended.html">
+                    Add Content
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              Manage Users
+            </a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="create.html">
+                  <i class="fa fa-plus"></i>
+                  <p>Add User</p>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Language <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      中文
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-with-icons">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-list"></i>
+                  <p class="hidden-md hidden-lg"> More <b class="caret"></b>
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-with-icons">
+                  <li>
+                    <a href="#">
+                      <i class="pe-7s-tools"></i> Change Password
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" class="text-danger">
+                      <i class="pe-7s-close-circle"></i> Log out
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row" >
+            <div class="col-md-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title">Search</h4>
+                </div>
+                <div class="content">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>First Name</label>
+                          <input type="text" class="form-control" placeholder="First Name" value="">
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>Last Name</label>
+                          <input type="text" class="form-control" placeholder="Last Name" value="michael23">
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>&nbsp;</label>
+                          <br>
+                          <button type="submit" class="btn btn-info btn-fill btn-block">Search</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>Sort by</label>
+                          <select name="base_sort" id="base_sort"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
+                            <option value="">Select</option>
+                            <option value="profile_lastname">Lastname</option>
+                            <option value="profile_firstname">Firstname</option>
+                            <option value="user_id">ID</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>Status</label>
+                          <select name="status_flag" id="status_flag"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
+                            <option value="">Select</option>
+                            <option value="1">On-line</option>
+                            <option value="0">Off-line</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Tags</label>
+                          <!--<select name="profile_interests" id="profile_interests" class="form-control">
+					  <option value="">Select</option>
+					  					  <option value="networking">Networking</option>
+					  					  <option value="foodie">Foodie</option>
+					  					  <option value="nightlife">Nightlife</option>
+					  					  <option value="tour">Tour</option>
+					  					  <option value="translator">Translator</option>
+					  					  <option value="wellness">Wellness</option>
+					  					  <option value="workout">Workout</option>
+					  					  <option value="professional">Professional</option>
+					  					  <option value="nearby">Nearby</option>
+					  					</select>-->
+                          <select multiple data-title="Multiple Select" name="profile_interests" class="selectpicker" data-style="btn-info btn-fill btn-block" data-menu-style="dropdown-blue" id="profile_interests">
+                            <option value="networking">Networking</option>
+                            <option value="foodie">Foodie</option>
+                            <option value="nightlife">Nightlife</option>
+                            <option value="tour">Tour</option>
+                            <option value="translator">Translator</option>
+                            <option value="wellness">Wellness</option>
+                            <option value="workout">Workout</option>
+                            <option value="professional">Professional</option>
+                            <option value="nearby">Nearby</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                          <label>&nbsp;</label>
+                          <br>
+                          <button type="submit" class="btn btn-info btn-fill btn-block">Filter</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <a class="btn btn-primary btn-block btn-fill" href="/en/user/create.html">
+                  <i class="pe-7s-plus"></i>&nbsp;Add User
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <a class="btn btn-danger btn-block btn-fill" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
+                  Delete
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <a class="btn btn-primary btn-block" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
+                  Export
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-offset-1 col-sm-2">
+              <select name="pageSize" id="pageSize-select" class="form-control">
+                <option value="25" selected="">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="content table-responsive table-full-width">
+                  <table class="table table-hover table-striped ">
+                    <thead>
+                    <th width="4%">
+                        <input id="" type="checkbox" name="" value="">
+                      </th>
+                      <th width="8%">ID</th>
+                      <th width="20%">Name</th>
+                      <th width="20%">Email</th>
+                      <th width="20%">Time of Registration</th>
+                      <th>Operation</th>
+                      
+                        </thead>
+                    <tbody>
+                      <!-- user entry -->
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="subBox[]" value="">
+                        </td>
+                        <td>30011</td>
+                        <td>Dakota Rice</td>
+                        <td>mickalauskas_mathew@yahoo.com</td>
+                        <td>2016-05-03 17:04:10</td>
+                        <td>
+                          <a href="#" class="myOpen btn btn-primary btn-fill btn-sm">
+                            Edit
+                          </a>
+                          &nbsp;
+                          <a href="#myModal" role="button" class="myDel btn btn-danger btn-sm" data-type="2" data-userid="" data-toggle="modal">
+                            Delete
+                          </a>
+                        </td>
+                      </tr>
+                      <!-- /user entry -->
+                      <!-- user entry -->
+                      <tr>
+                        <td>
+                          <input class="userCheck" type="checkbox" name="subBox[]" value="30010">
+                        </td>
+                        <td>30010</td>
+                        <td>Minerva Hooper</td>
+                        <td>justin.tubay@gmail.com</td>
+                        <td>2016-05-03 17:03:00</td>
+                        <td>
+                          <a href="#" class="myOpen btn btn-primary btn-fill btn-sm">
+                            Edit
+                          </a>
+                          &nbsp;
+                          <a href="#myModal" role="button" class="myDel btn btn-danger btn-sm" data-type="2" data-userid="" data-toggle="modal">
+                            Delete
+                          </a>
+                        </td>
+                      </tr>
+                      <!-- /user entry -->
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <ul class="pagination">
+                <!--   
+                                                color-classes: "pagination-blue", "pagination-azure", "pagination-orange", "pagination-red", "pagination-green"       
+                                            -->
+                <li>
+                  <a href="#">
+                    «
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    1
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    2
+                  </a>
+                  <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
+                </li>
+                <li class="active">
+                  <a href="#">
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    4
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    5
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    6
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    7
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    8
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    9
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    10
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    »
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="bootstrap-table">
+                  <div class="fixed-table-toolbar">
+                    <div class="bars pull-left">
+                      <div class="toolbar">
+                        <!--        Here you can write extra buttons/actions for the toolbar              -->
+                      </div>
+                    </div>
+                    <div class="columns columns-right pull-right">
+                      <button class="btn btn-default" type="button" name="refresh" title="Refresh"><i class="glyphicon fa fa-refresh"></i></button>
+                      <button class="btn btn-default" type="button" name="toggle" title="Toggle"><i class="glyphicon fa fa-th-list"></i></button>
+                      <div class="keep-open btn-group" title="Columns">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="glyphicon fa fa-columns"></i>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li>
+                            <label>
+                              <input type="checkbox" data-field="id" value="1" checked="checked">
+                              ID</label>
+                          </li>
+                          <li>
+                            <label>
+                              <input type="checkbox" data-field="name" value="2" checked="checked">
+                              Name</label>
+                          </li>
+                          <li>
+                            <label>
+                              <input type="checkbox" data-field="email" value="3" checked="checked">
+                              Email</label>
+                          </li>
+                          <li>
+                            <label>
+                              <input type="checkbox" data-field="reg-time" value="4" checked="checked">
+                              Registration Time</label>
+                          </li>
+                          
+                          <li>
+                            <label>
+                              <input type="checkbox" data-field="actions" value="6" checked="checked">
+                              Actions</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pull-left search">
+                      <input class="form-control" type="text" placeholder="Search">
+                      <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
+                    </div>
+                  </div>
+                  <div class="fixed-table-container" style="padding-bottom: 0px;">
+                    <div class="fixed-table-header" style="display: none;">
+                      <table>
+                      </table>
+                    </div>
+                    <div class="fixed-table-body">
+                      <div class="fixed-table-loading" style="top: 41px;">
+                        Loading, please wait...
+                      </div>
+                      <table id="bootstrap-table" class="table table-hover" style="margin-top: 0px;">
+                        <thead style="display: table-header-group;">
+                          <tr>
+                            <th class="bs-checkbox " style="width: 36px; " data-field="state">
+                              <div class="th-inner ">
+                                <input name="btSelectAll" type="checkbox">
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                            <th class="text-center" style="" data-field="id">
+                              <div class="th-inner ">
+                                ID
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                            <th style="" data-field="name">
+                              <div class="th-inner sortable both">
+                                Name
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                            <th style="" data-field="email">
+                              <div class="th-inner sortable both">
+                                Email
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                            <th style="" data-field="reg-time">
+                              <div class="th-inner sortable both asc">
+                                Time of Registration
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                            
+                            <th class="td-actions text-right" style="" data-field="actions">
+                              <div class="th-inner ">
+                                Actions
+                              </div>
+                              <div class="fht-cell">
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- data-index -->
+                          <tr data-index="0">
+                            <td class="bs-checkbox">
+                              <!-- data-index -->
+                              <input data-index="0" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">30014</td>
+                            <td style="">Shana Mejia</td>
+                            <td style="">mickalauskas_mathew@yahoo.com</td>
+                            
+                            <td style="">2016-05-05 17:04:10</td>
+                            <td class="td-actions text-right" style="">
+                              <!-- Edit -->
+                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i> Edit
+                              </a>
+                              <!-- Delete -->
+                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i> Delete
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="1">
+                            <td class="bs-checkbox">
+                              <input data-index="1" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">30477</td>
+                            <td style="">Matthew Van Lingen</td>
+                            <td style="">mattvanlingen@yahoo.com</td>
+                            
+                            <td style="">2016-05-05 10:57:51</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i> Edit
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i> Delete
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="2">
+                            <td class="bs-checkbox">
+                              <input data-index="2" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">30474</td>
+                            <td style="">Bernie Sanders</td>
+                            <td style="">joshua.thies@gordon.edu</td>
+                            
+                            <td style="">2016-05-05 10:26:24</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i> Edit
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i> Delete
+                              </a>
+                            </td>
+                          </tr>
+                          <!--<tr data-index="2">
+                            <td class="bs-checkbox">
+                              <input data-index="2" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">6</td>
+                            <td style="">Mason Porter</td>
+                            <td style="">$78,615</td>
+                            <td style="">Chile</td>
+                            <td style="">Gloucester</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="3">
+                            <td class="bs-checkbox">
+                              <input data-index="3" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">12</td>
+                            <td style="">Josiah Simon</td>
+                            <td style="">$50,265</td>
+                            <td style="">Christmas Island</td>
+                            <td style="">Sint-Jans-Molenbeek</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="4">
+                            <td class="bs-checkbox">
+                              <input data-index="4" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">2</td>
+                            <td style="">Minerva Hooper</td>
+                            <td style="">$23,789</td>
+                            <td style="">Curaçao</td>
+                            <td style="">Sinaai-Waas</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="5">
+                            <td class="bs-checkbox">
+                              <input data-index="5" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">7</td>
+                            <td style="">Alden Chen</td>
+                            <td style="">$63,929</td>
+                            <td style="">Finland</td>
+                            <td style="">Gary</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="6">
+                            <td class="bs-checkbox">
+                              <input data-index="6" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">17</td>
+                            <td style="">Connor Wagner</td>
+                            <td style="">$86,537</td>
+                            <td style="">Germany</td>
+                            <td style="">Solihull</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr data-index="7">
+                            <td class="bs-checkbox">
+                              <input data-index="7" name="btSelectItem" type="checkbox">
+                            </td>
+                            <td class="text-center" style="">9</td>
+                            <td style="">Illana Nelson</td>
+                            <td style="">$56,142</td>
+                            <td style="">Heard Island</td>
+                            <td style="">Montone</td>
+                            <td class="td-actions text-right" style="">
+                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
+                                <i class="fa fa-image"></i>
+                              </a>
+                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
+                                <i class="fa fa-remove"></i>
+                              </a>
+                            </td>
+                          </tr>-->
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="fixed-table-footer" style="display: none;">
+                      <table>
+                        <tbody>
+                          <tr></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="fixed-table-pagination">
+                      <div class="pull-left pagination-detail">
+                        <span class="pagination-info"></span><span class="page-list"><span class="btn-group dropup">
+                        <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown"><span class="page-size">8</span>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li class="active">
+                            <a href="javascript:void(0)">
+                              25
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              50
+                            </a>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0)">
+                              100
+                            </a>
+                          </li>
+                        </ul>
+                        </span> rows visible</span>
+                      </div>
+                      <div class="pull-right pagination">
+                        <ul class="pagination">
+                          <li class="page-first disabled">
+                            <a href="javascript:void(0)">
+                              «
+                            </a>
+                          </li>
+                          <li class="page-pre disabled">
+                            <a href="javascript:void(0)">
+                              ‹
+                            </a>
+                          </li>
+                          <li class="page-number active">
+                            <a href="javascript:void(0)">
+                              1
+                            </a>
+                          </li>
+                          <li class="page-number">
+                            <a href="javascript:void(0)">
+                              2
+                            </a>
+                          </li>
+                          <li class="page-number">
+                            <a href="javascript:void(0)">
+                              3
+                            </a>
+                          </li>
+                          <li class="page-next">
+                            <a href="javascript:void(0)">
+                              ›
+                            </a>
+                          </li>
+                          <li class="page-last">
+                            <a href="javascript:void(0)">
+                              »
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix">
+                </div>
+              </div>
+              <!--  end card  -->
+            </div>
+            <!-- end col-md-12 -->
+          </div>
+          <!-- end card -->
+          
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <p class="copyright pull-right">
+            &copy; 2016
+            <a href="#">
+              Enjoyney, Inc.
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+<!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
+<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Forms Validations Plugin -->
+<script src="../assets/js/jquery.validate.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../assets/js/moment.min.js"></script>
+
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="../assets/js/bootstrap-datetimepicker.js"></script>
+
+<!--  Select Picker Plugin -->
+<script src="../assets/js/bootstrap-selectpicker.js"></script>
+
+<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+<script src="../assets/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../assets/js/bootstrap-notify.js"></script>
+
+<!-- Sweet Alert 2 plugin -->
+<script src="../assets/js/sweetalert2.js"></script>
+
+<!-- Vector Map plugin -->
+<script src="../assets/js/jquery-jvectormap.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- Wizard Plugin    -->
+<script src="../assets/js/jquery.bootstrap.wizard.min.js"></script>
+
+<!--  Datatable Plugin    -->
+<script src="../assets/js/bootstrap-table.js"></script>
+
+<!--  Full Calendar Plugin    -->
+<script src="../assets/js/fullcalendar.min.js"></script>
+
+<!-- Light Bootstrap Dashboard Core javascript and methods -->
+<script src="../assets/js/light-bootstrap-dashboard.js"></script>
+
+<!--   Sharrre Library    -->
+<script src="../assets/js/jquery.sharrre.js"></script>
+
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+<script type="text/javascript">
+        $().ready(function(){
+
+            // Init Sliders
+            demo.initFormExtendedSliders();
+
+            // Init DatetimePicker
+            demo.initFormExtendedDatetimepickers();
+        });
+    </script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46172202-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>

@@ -23,8 +23,8 @@
     <!--  Light Bootstrap Dashboard core CSS    -->
     <link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
-    
-    <link href="../assets/css/style.css" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
 
 
     <!--     Fonts and icons     -->
@@ -36,7 +36,6 @@
 <body>
 
 <div class="wrapper">
-<!-- Sidebar -->
     <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-5.jpg">
       <!--
 
@@ -44,6 +43,7 @@
             Tip 2: you can also add an image using data-image tag
 
         -->
+      
       <div class="logo">
         <a href="http://manage.prod.knecta.net" class="logo-text">
           Knecta
@@ -51,49 +51,27 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <!--<li>
+          <li>
             <a href="#">
               <i class="pe-7s-users"></i>
               <p>Admin</p>
             </a>
-          </li>-->
-          <li>
-            <a data-toggle="collapse" href="#admin">
-              <i class="pe-7s-users"></i>
-              <p>Admin <b class="caret"></b>
-              </p>
-            </a>
-            <div class="collapse" id="admin">
-              <ul class="nav">
-                <li>
-                  <a href="../admin/index.html">
-                    All Accounts
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="../admin/account.html">
-                    My Account
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
           <li class="active">
-            <a data-toggle="collapse" href="#user" aria-expanded="true">
+            <a data-toggle="collapse" href="#user">
               <i class="pe-7s-user"></i>
               <p>User <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse in" id="user">
+            <div class="collapse" id="user">
               <ul class="nav">
                 <li class="active">
-                  <a href="../user/index.html">
+                  <a href="#">
                     User List
                   </a>
                 </li>
                 <li>
-                  <a href="../user/create.html">
+                  <a href="#">
                     Add User
                   </a>
                 </li>
@@ -109,12 +87,12 @@
             <div class="collapse" id="content">
               <ul class="nav">
                 <li>
-                  <a href="../content/index.html">
+                  <a href="../examples/untitled folder/regular.html">
                     Manage
                   </a>
                 </li>
                 <li>
-                  <a href="../content/add.html">
+                  <a href="../examples/forms/extended.html">
                     Add Content
                   </a>
                 </li>
@@ -124,7 +102,6 @@
         </ul>
       </div>
     </div>
-    <!-- /sidebar -->
 
     <div class="main-panel">
         <nav class="navbar navbar-default">
@@ -142,7 +119,12 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-              
+              <li>
+                <a href="create.html">
+                  <i class="fa fa-plus"></i>
+                  <p>Add User</p>
+                </a>
+              </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Language <b class="caret"></b>
@@ -235,7 +217,7 @@
                         <div class="form-group">
                           <label>Status</label>
                           <select name="status_flag" id="status_flag"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
-                            <option value="1" selected>On-line</option>
+                            <option value="1">On-line</option>
                             <option value="0">Off-line</option>
                           </select>
                         </div>
@@ -279,7 +261,7 @@
 
                             <div class="toolbar">
                                 <!--        Here you can write extra buttons/actions for the toolbar              -->
-                                <a class="btn btn-primary btn-fill" href="create.html">
+                                <a class="btn btn-primary btn-fill" href="/en/user/create.html">
                   <i class="fa fa-plus"></i>&nbsp;Add User
                 </a>&nbsp;
                 <a rel="tooltip" title="Remove selected"  class="btn btn-danger table-action remove btn-fill" href="#">
@@ -409,8 +391,6 @@
 
 	<!--   Sharrre Library    -->
     <script src="../assets/js/jquery.sharrre.js"></script>
-    
-    <script src="../assets/js/showpassword.js"></script>
 
 
     <script type="text/javascript">
@@ -418,10 +398,10 @@
 
         function operateFormatter(value, row, index) {
             return [
-                '<a rel="tooltip" title="Edit" class="btn btn-sm btn-info btn-fill table-action edit" href="edit.html">',
+                '<a rel="tooltip" title="Edit" class="btn btn-info btn-fill table-action edit" href="javascript:void(0)">',
                     '<i class="fa fa-edit"></i> Edit',
                 '</a>&nbsp;',
-                '<a rel="tooltip" title="Delete" class="btn btn-sm btn-danger table-action remove" href="javascript:void(0)">',
+                '<a rel="tooltip" title="Delete" class="btn btn-danger table-action remove" href="javascript:void(0)">',
                     '<i class="fa fa-remove"></i> Delete',
                 '</a>'
             ].join('');
@@ -435,12 +415,12 @@
                     swal('You click view icon, row: ', info);
                     console.log(info);
                 },
-                //'click .edit': function (e, value, row, index) {
-//                    info = JSON.stringify(row);
-//
-//                    swal('You click edit icon, row: ', info);
-//                    console.log(info);
-//                },
+                'click .edit': function (e, value, row, index) {
+                    info = JSON.stringify(row);
+
+                    swal('You click edit icon, row: ', info);
+                    console.log(info);
+                },
                 'click .remove': function (e, value, row, index) {
                     console.log(row);
                     $table.bootstrapTable('remove', {

@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Knecta Backend Management</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+<!--  Social tags      -->
+<meta name="keywords" content="knecta">
+<meta name="description" content="Knecta tool to manage backend">
+
+<!-- Bootstrap core CSS     -->
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+
+<!--  Light Bootstrap Dashboard core CSS    -->
+<link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+<!--     Fonts and icons     -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+<link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-5.jpg">
+      <!--
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
+      <div class="logo">
+        <a href="http://manage.prod.knecta.net" class="logo-text">
+          Knecta
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <!--<li>
+            <a href="#">
+              <i class="pe-7s-users"></i>
+              <p>Admin</p>
+            </a>
+          </li>-->
+          <li>
+            <a data-toggle="collapse" href="#admin">
+              <i class="pe-7s-users"></i>
+              <p>Admin <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="admin">
+              <ul class="nav">
+                <li>
+                  <a href="../admin/index.html">
+                    All Accounts
+                  </a>
+                </li>
+                <li>
+                  <a href="../admin/account.html">
+                    My Account
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <a data-toggle="collapse" href="#user" aria-expanded="true">
+              <i class="pe-7s-user"></i>
+              <p>User <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse in" id="user">
+              <ul class="nav">
+                <li class="active">
+                  <a href="../user/index.html">
+                    User List
+                  </a>
+                </li>
+                <li>
+                  <a href="../user/create.html">
+                    Add User
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#content">
+              <i class="pe-7s-note2"></i>
+              <p>Content <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="content">
+              <ul class="nav">
+                <li>
+                  <a href="../content/index.html">
+                    Manage
+                  </a>
+                </li>
+                <li>
+                  <a href="../content/add.html">
+                    Add Content
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /sidebar -->
+    <div class="main-panel">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              Manage Users
+            </a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Language <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      中文
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-with-icons">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-list"></i>
+                  <p class="hidden-md hidden-lg"> More <b class="caret"></b>
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-with-icons">
+                  <li>
+                    <a href="#">
+                      <i class="pe-7s-tools"></i> Change Password
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" class="text-danger">
+                      <i class="pe-7s-close-circle"></i> Log out
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title"><span class="text-space">Edit Profile</span>&nbsp;&nbsp;<button class="btn btn-info btn-fill pull-right" id="submitUpdataUserForm" type="submit"><i class="fa fa-save"></i> Save</button></h4>
+                </div>
+                <div class="content content-full-width">
+                  <ul role="tablist" class="nav nav-tabs">
+                    <li role="presentation"  class="active">
+                      <a href="#profile" data-toggle="tab">
+                        <i class="fa fa-user"></i> Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#password" data-toggle="tab">
+                        <i class="fa fa-cog"></i> Password
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="profile" class="tab-pane active">
+                      <form action="" method="post" id="userUpdateForm" name="myform" data-url="">
+                        <input type="hidden" id="userId" value="" name="user_id">
+                        <fieldset>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name" value="Miranda">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last Name" value="DeHart">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="">Email</label>
+                                <input disabled type="email" class="form-control" placeholder="Email" value="miranda.dehart189@gmail">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <br>
+                        <!-- private details-->
+                        <fieldset>
+                          <legend>
+                          <h5>Private Details</h5>
+                          </legend>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Gender</label>
+                                <select name="user[profile_sex]" id="status_flag"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
+                                  <option value="1"> Male</option>
+                                  <option value="2" selected> Female</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Birth Date</label>
+                                <input type="date" id="date_1" value="1995-12-11" name="user[profile_birthday]" class="form-control hasDatepicker" readonly placeholder="Birth Date">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" id="" value="" name="user[base_phone]" class="form-control" placeholder="Phone Number">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <br>
+                        <!-- MOEE DETAILS -->
+                        <fieldset>
+                          <legend>
+                          <h5>More Details</h5>
+                          </legend>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>City</label>
+                                <input type="text" id="" value="Calvert" name="user[profile_city]" class="form-control" placeholder="e.g. San Francisco">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>State</label>
+                                <input type="text" id="" value="TX" name="user[profile_statecode]" class="form-control" placeholder="e.g. CA">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Country</label>
+                                <input type="text" id="" value="United States" name="user[profile_county]" class="form-control" placeholder="e.g. United States">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Longitude</label>
+                                <input type="text" id="" value="-96.671100" name="user[lbs_longitude]" class="form-control" placeholder="Longitude">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label>Latitude</label>
+                                <input type="text" value="30.978200" name="user[lbs_latitude]" class="form-control" placeholder="Latitude">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Industry</label>
+                                <input type="text" id="" value="Sales" name="user[profile_industry]" class="form-control" placeholder="e.g. Technology">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" id="" value="Manager" name="user[profile_title]" class="form-control" placeholder="e.g. Software Engineer">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label">Tags</label>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <label class="checkbox checkbox-inline hidden">
+                                    </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="networking">
+                                      Networking </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="foodie">
+                                      Foodie </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" checked="" value="nightlife">
+                                      Nightlife </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="tour">
+                                      Tour </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="translator">
+                                      Translator </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" checked="" value="wellness">
+                                      Wellness </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" checked="" value="workout">
+                                      Workout </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="professional">
+                                      Professional </label>
+                                    <label class="checkbox checkbox-inline">
+                                      <input type="checkbox" name="user[profile_interests][]" data-toggle="checkbox" value="nearby">
+                                      Nearby </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label>About Me</label>
+                                <textarea name="user[profile_intro]" rows="5" class="form-control" placeholder="Please enter a personal introduction"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <div class="row">
+                        <div class="col-md-offset-6 col-md-6">
+                        <button class="btn btn-info btn-fill pull-right" id="submitUpdataUserForm" type="submit">Update Profile</button></div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        <br>
+                        <fieldset id="crop-avatar" data-url="http://static.prod.knecta.net/thumb/1242x900/" data-avatar="/en/user/ajaxAvatar.html" data-return="/en/user/ajaxGallery.html">
+                          <legend>
+                          <h5>Photos</h5>
+                          </legend>
+                          <div class="form-group">
+                            <div class="col-md-12" id="avatar-bunds">
+                              <button type="button" id="avatar-bund" class="btn btn-primary btn-fill " title="Add Photo" data-type="0">Add Photo</button>
+                              <small class="help-block">Up to 10 photos per user.</small>
+                              <input type="hidden" id="inputImgService_intro" value="201605/05/114109_6566.jpg" name="user[photo_intro]">
+                              <input type="hidden" id="imgService_avatar" value="201605/05/114109_6566.jpg" name="user[photo_avatar]">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div id="row-avatar">
+                              <div class="col-md-4 col-sm-6 row-space-4 class_intro " id="thumb_1" key="1">
+                                <div class="thumbnail">
+                                  <img class="img-responsive" data_num="1" data_type="201605/05/114109_6566.jpg" src="http://static.prod.knecta.net/thumb/1242x900/201605/05/114109_6566.jpg" alt="photo" data-original-title="">
+                                  <div class="caption text-center">
+                                    <p>
+                                      <a class="btn btn-primary btn-fill setCover" is_default="1" data_type="201605/05/114109_6566.jpg" href="javascript:void(0);">
+                                        Set as Cover
+                                      </a>
+                                      &nbsp;
+                                      <a class="btn btn-danger row-space-top-2 getIsDefault avatar-delect" is_key="1" is_default="1" href="javascript:void(0);">
+                                        Delete
+                                      </a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <!-- /profile tab -->
+                    <!-- password tab -->
+                    <div id="password" class="tab-pane">
+                      <form class="form-horizontal" action="/en/user/ajaxPassword.html" method="post" id="passwordUpdataForm" name="myform">
+                        <input type="hidden" id="userId" value="" name="user_id">
+                        <fieldset>
+                          <legend><h5>Change Password</h5></legend>
+                          <div class="row">
+                          <div class="form-group">
+                          
+                            <label class="control-label col-sm-3">Email</label>
+                            <div class="col-sm-3">
+                              <input class="form-control" type="text" id="base_email" data-error="base_email_error" data-msg-required="Please enter the mailbox" value="" name="user[base_email]" placeholder="Email" readonly>
+                            </div>
+                            <span class="require-red base_newPassword_error"></span>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="form-group">
+                          
+                            <label class="control-label col-sm-3">New Password</label>
+                            <div class="col-sm-3">
+                              <input class="form-control" id="base_newPassword" data-error="base_newPassword_error" data-msg-required="Please enter the password" type="text" value="" name="base_newPassword" placeholder="New Password">
+                            </div>
+                            <span class="require-red base_newPassword_error"></span>
+                          </div>
+                          </div>
+                        </fieldset>
+                        <div class="row">
+                        <div class="col-sm-offset-3 col-sm-9">
+                        <div class="form-group">
+                        <button class="btn btn-info btn-fill pull-left" id="submitUpdataUserForm" type="submit">Save</button></div></div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /password tab -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <p class="copyright pull-right">
+            &copy; 2016
+            <a href="#">
+              Enjoyney, Inc.
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+<!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
+<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Forms Validations Plugin -->
+<script src="../assets/js/jquery.validate.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../assets/js/moment.min.js"></script>
+
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="../assets/js/bootstrap-datetimepicker.js"></script>
+
+<!--  Select Picker Plugin -->
+<script src="../assets/js/bootstrap-selectpicker.js"></script>
+
+<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+<script src="../assets/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../assets/js/bootstrap-notify.js"></script>
+
+<!-- Sweet Alert 2 plugin -->
+<script src="../assets/js/sweetalert2.js"></script>
+
+<!-- Vector Map plugin -->
+<script src="../assets/js/jquery-jvectormap.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- Wizard Plugin    -->
+<script src="../assets/js/jquery.bootstrap.wizard.min.js"></script>
+
+<!--  Datatable Plugin    -->
+<script src="../assets/js/bootstrap-table.js"></script>
+
+<!--  Full Calendar Plugin    -->
+<script src="../assets/js/fullcalendar.min.js"></script>
+
+<!-- Light Bootstrap Dashboard Core javascript and methods -->
+<script src="../assets/js/light-bootstrap-dashboard.js"></script>
+
+<!--   Sharrre Library    -->
+<script src="../assets/js/jquery.sharrre.js"></script>
+
+<script src="../assets/js/showpassword.js"></script>
+
+</html>

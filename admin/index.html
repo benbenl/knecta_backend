@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+	<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>Knecta Backend Management</title>
@@ -23,7 +23,7 @@
     <!--  Light Bootstrap Dashboard core CSS    -->
     <link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
-    
+    <!--  Custom CSS     -->
     <link href="../assets/css/style.css" rel="stylesheet" />
 
 
@@ -57,20 +57,19 @@
               <p>Admin</p>
             </a>
           </li>-->
-          <li>
-            <a data-toggle="collapse" href="#admin">
+          <li class="active">
+            <a data-toggle="collapse" href="#admin" aria-expanded="true">
               <i class="pe-7s-users"></i>
               <p>Admin <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="admin">
+            <div class="collapse in" id="admin">
               <ul class="nav">
-                <li>
+                <li class="active">
                   <a href="../admin/index.html">
                     All Accounts
                   </a>
                 </li>
-                
                 <li>
                   <a href="../admin/account.html">
                     My Account
@@ -79,15 +78,15 @@
               </ul>
             </div>
           </li>
-          <li class="active">
-            <a data-toggle="collapse" href="#user" aria-expanded="true">
+          <li>
+            <a data-toggle="collapse" href="#user">
               <i class="pe-7s-user"></i>
               <p>User <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse in" id="user">
+            <div class="collapse" id="user">
               <ul class="nav">
-                <li class="active">
+                <li>
                   <a href="../user/index.html">
                     User List
                   </a>
@@ -137,7 +136,7 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-              Manage Users
+              Manage Admin Accounts
             </a>
           </div>
           <div class="collapse navbar-collapse">
@@ -189,105 +188,32 @@
 
         <div class="content">
             <div class="container-fluid">
-<!-- Search -->
-<div class="row" >
+          <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="header">
-                  <h4 class="title">Search</h4>
+                  <h4 class="title"><span class="text-space">Admin Accounts</span>&nbsp;&nbsp;</h4>
                 </div>
-                <div class="content">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label>First Name</label>
-                          <input type="text" class="form-control" placeholder="First Name" value="">
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label>Last Name</label>
-                          <input type="text" class="form-control" placeholder="Last Name" value="michael23">
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label>&nbsp;</label>
-                          <br>
-                          <button type="submit" class="btn btn-info btn-fill btn-block">Search</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label>Status</label>
-                          <select name="status_flag" id="status_flag"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
-                            <option value="1" selected>On-line</option>
-                            <option value="0">Off-line</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Tags</label>
-                          <select multiple data-title="Multiple Select" name="profile_interests" class="selectpicker" data-style="btn-info btn-block" data-menu-style="dropdown-blue" id="profile_interests">
-                            <option value="networking">Networking</option>
-                            <option value="foodie">Foodie</option>
-                            <option value="nightlife">Nightlife</option>
-                            <option value="tour">Tour</option>
-                            <option value="translator">Translator</option>
-                            <option value="wellness">Wellness</option>
-                            <option value="workout">Workout</option>
-                            <option value="professional">Professional</option>
-                            <option value="nearby">Nearby</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                          <label>&nbsp;</label>
-                          <br>
-                          <button type="submit" class="btn btn-info btn-fill btn-block">Filter</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clearfix">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-
+                <div class="content content-full-width">
+                  <ul role="tablist" class="nav nav-tabs">
+                    <li role="presentation"  class="active">
+                      <a href="#list" data-toggle="tab">
+                        <i class="fa  fa-users"></i> List
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#add" data-toggle="tab">
+                        <i class="fa fa-user-plus"></i> Add
+                      </a>
+                    </li>
+                  </ul>
+                  
+                  <div class="tab-content">
+                    <!-- list tab -->
+                    <div id="list" class="tab-pane active">
+                      
                             <div class="toolbar">
-                                <!--        Here you can write extra buttons/actions for the toolbar              -->
-                                <a class="btn btn-primary btn-fill" href="create.html">
-                  <i class="fa fa-plus"></i>&nbsp;Add User
-                </a>&nbsp;
-                <a rel="tooltip" title="Remove selected"  class="btn btn-danger table-action remove btn-fill" href="#">
-                  <i class="fa fa-trash"></i>&nbsp;Delete
-                </a>&nbsp;
-                <a class="btn btn-info" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
-                  <i class="fa fa-share-square-o"></i>&nbsp;Export
-                </a>
+                             <!-- toolbar btns -->
                                 
                             </div>
 
@@ -295,45 +221,95 @@
                                 <thead>
                                     <th data-field="state" data-checkbox="true"></th>
                                     <th data-field="id" class="text-center" data-sortable="true">ID</th>
-                                	<th data-field="firstname" data-sortable="true">First Name</th>
-                                	<th data-field="lastname" data-sortable="true">Last Name</th>
-                                	<th data-field="email" data-sortable="true">Email</th>
+                                	<th data-field="username" data-sortable="true">Username</th>
+                                	<th data-field="privileges" data-sortable="true">Privileges</th>
+                                	
                                 	<th data-field="reg-time" data-sortable="true">Registration</th>
                                 	<th data-field="actions" class="td-actions text-right" data-events="operateEvents" data-formatter="operateFormatter">Actions</th>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td></td>
-                                    	<td>30489</td>
-                                    	<td>Miranda</td>
-                                    	<td>DeHart</td>
-                                    	<td>miranda.dehart189@gmail.com</td>
-                                    	<td>05/05/2016 11:39</td>
+                                    	<td>3</td>
+                                    	<td>content1</td>
+                                    	<td>Content</td>
+                                    	<td>04/01/2016 16:10</td>
                                     	<td></td>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                    	<td>30477</td>
-                                    	<td>Matthew</td>
-                                    	<td>Van Lingen</td>
-                                    	<td>mattvanlingen@yahoo.com</td>
-                                    	<td>05/05/2016 10:57</td>
-                                    	<td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                    	<td>30474</td>
-                                    	<td>Bernie</td>
-                                    	<td>Sanders</td>
-                                    	<td>joshua.thies@gordon.edu</td>
-                                    	<td>05/05/2016 10:26</td>
-                                    	<td></td>
-                                    </tr>
+						<td></td>
+						<td>2</td>
+						<td>knecta</td>
+						<td>Content</td>
+						<td>03/31/2016 18:32</td>
+						<td>		
+						</td>
+					</tr>
+          <tr>
+						<td></td>
+						<td>1</td>
+						<td>admin</td>
+						<td>Super power</td>
+						<td>08/05/2015 00:52</td>
+						<td></td>
+					</tr>
+                                    
                                 </tbody>
                             </table>
-                        </div><!--  end card  -->
-                    </div> <!-- end col-md-12 -->
-                </div> <!-- end row -->
+                    </div>
+                    <!-- /list tab -->
+                    <!-- add tab -->
+                    <div id="add" class="tab-pane">
+                    <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Username</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" id="user_name" data-error="user_name_error" type="text" value="" name="user[user_name]" placeholder="">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Password</label>
+                                        <div class="col-md-9">
+                                        <div class="input-group">
+                                            <input class="form-control" id="base_newPassword" data-error="base_newPassword_error" data-msg-required="Please enter the new password" type="password" value="" name="base_newPassword" placeholder="">
+                                            <span class="input-group-addon hide-password">Show</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                
+                                    <label class="col-md-3 control-label">Privileges</label>
+                                 
+                                <div class="col-md-9">
+                                    
+                                      <label class="checkbox checkbox-inline">
+									<input class="user_power" type="checkbox" name="user[user_power][]" data-error="user_power_error" value="1">User								</label>
+                  <label class=" checkbox checkbox-inline">
+									<input class="user_power" type="checkbox" name="user[user_power][]" data-error="user_power_error" value="3">Content								</label>
+                                    
+                                  </div>
+                              </div>
+                                   
+
+                                    <div class="form-group">
+                                        <label class="col-md-3"></label>
+                                        <div class="col-md-9">
+                                            <button type="submit" class="btn btn-fill btn-info">Save</button>
+                                            <a class="btn btn-default" href="index.html">Cancel</a>
+                                        </div>
+                                    </div>
+                                </form>
+                      
+                    </div>
+                    <!-- /password tab -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+
 
             </div>
         </div>
@@ -409,9 +385,8 @@
 
 	<!--   Sharrre Library    -->
     <script src="../assets/js/jquery.sharrre.js"></script>
-    
-    <script src="../assets/js/showpassword.js"></script>
 
+<script src="../assets/js/showpassword.js"></script>
 
     <script type="text/javascript">
         var $table = $('#bootstrap-table');
@@ -490,15 +465,6 @@
 
     </script>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-46172202-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    
 
 </html>
