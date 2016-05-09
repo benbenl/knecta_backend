@@ -4,47 +4,20 @@
 <meta charset="utf-8" />
 <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Light Bootstrap Dashboard PRO by Creative Tim</title>
+<title>Knecta Backend Management</title>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 <meta name="viewport" content="width=device-width" />
 
 <!--  Social tags      -->
-<meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap dashboard, bootstrap, css3 dashboard, bootstrap admin, light bootstrap dashboard, frontend, responsive bootstrap dashboard">
-<meta name="description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
-
-<!-- Schema.org markup for Google+ -->
-<meta itemprop="name" content="Light Bootstrap Dashboard PRO by Creative Tim">
-<meta itemprop="description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
-<meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg">
-<!-- Twitter Card data -->
-
-<meta name="twitter:card" content="product">
-<meta name="twitter:site" content="@creativetim">
-<meta name="twitter:title" content="Light Bootstrap Dashboard PRO by Creative Tim">
-<meta name="twitter:description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful.">
-<meta name="twitter:creator" content="@creativetim">
-<meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg">
-<meta name="twitter:data1" content="Light Bootstrap Dashboard PRO by Creative Tim">
-<meta name="twitter:label1" content="Product Type">
-<meta name="twitter:data2" content="$29">
-<meta name="twitter:label2" content="Price">
-
-<!-- Open Graph data -->
-<meta property="og:title" content="Light Bootstrap Dashboard PRO by Creative Tim" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html" />
-<meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg"/>
-<meta property="og:description" content="Forget about boring dashboards, get an admin template designed to be simple and beautiful." />
-<meta property="og:site_name" content="Creative Tim" />
+<meta name="keywords" content="knecta">
+<meta name="description" content="Knecta tool to manage backend">
 
 <!-- Bootstrap core CSS     -->
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
 <!--  Light Bootstrap Dashboard core CSS    -->
 <link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
-
-<!--  CSS for Demo Purpose, don't include it in your project     -->
-<link href="../assets/css/demo.css" rel="stylesheet" />
+<link href="../assets/css/style.css" rel="stylesheet" />
 
 <!--     Fonts and icons     -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -53,14 +26,14 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-5.jpg">
+    <!-- Sidebar -->
+    <div class="sidebar" data-color="azure" data-image="../assets/img/sidebar-5.jpg">
       <!--
 
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
             Tip 2: you can also add an image using data-image tag
 
         -->
-      
       <div class="logo">
         <a href="http://manage.prod.knecta.net" class="logo-text">
           Knecta
@@ -68,27 +41,48 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li>
+          <!--<li>
             <a href="#">
               <i class="pe-7s-users"></i>
               <p>Admin</p>
             </a>
+          </li>-->
+          <li>
+            <a data-toggle="collapse" href="#admin">
+              <i class="pe-7s-users"></i>
+              <p>Admin <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="admin">
+              <ul class="nav">
+                <li>
+                  <a href="../admin/index.html">
+                    All Accounts
+                  </a>
+                </li>
+                <li>
+                  <a href="../admin/account.html">
+                    My Account
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="active">
-            <a data-toggle="collapse" href="#componentsExamples">
+            <a data-toggle="collapse" href="#user" aria-expanded="true">
               <i class="pe-7s-user"></i>
               <p>User <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="componentsExamples">
+            <div class="collapse in" id="user">
               <ul class="nav">
                 <li class="active">
-                  <a href="#">
+                  <a href="../user/index.html">
                     User List
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="../user/create.html">
                     Add User
                   </a>
                 </li>
@@ -96,20 +90,20 @@
             </div>
           </li>
           <li>
-            <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+            <a data-toggle="collapse" href="#content">
               <i class="pe-7s-note2"></i>
               <p>Content <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse in" id="formsExamples">
+            <div class="collapse" id="content">
               <ul class="nav">
                 <li>
-                  <a href="../examples/untitled folder/regular.html">
+                  <a href="../content/index.html">
                     Manage
                   </a>
                 </li>
                 <li>
-                  <a href="../examples/forms/extended.html">
+                  <a href="../content/add.html">
                     Add Content
                   </a>
                 </li>
@@ -119,6 +113,8 @@
         </ul>
       </div>
     </div>
+    <!-- /sidebar -->
+    
     <div class="main-panel">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -135,12 +131,6 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a href="create.html">
-                  <i class="fa fa-plus"></i>
-                  <p>Add User</p>
-                </a>
-              </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Language <b class="caret"></b>
@@ -165,12 +155,12 @@
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-with-icons">
-                  <li>
+                  <!--<li>
                     <a href="#">
                       <i class="pe-7s-tools"></i> Change Password
                     </a>
                   </li>
-                  <li class="divider"></li>
+                  <li class="divider"></li>-->
                   <li>
                     <a href="#" class="text-danger">
                       <i class="pe-7s-close-circle"></i> Log out
@@ -184,6 +174,7 @@
       </nav>
       <div class="content">
         <div class="container-fluid">
+          <!-- Search -->
           <div class="row" >
             <div class="col-md-12">
               <div class="card">
@@ -202,7 +193,7 @@
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group">
                           <label>Last Name</label>
-                          <input type="text" class="form-control" placeholder="Last Name" value="michael23">
+                          <input type="text" class="form-control" placeholder="Last Name" value="">
                         </div>
                       </div>
                       <div class="col-md-3 col-sm-6">
@@ -222,21 +213,13 @@
                     <div class="row">
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group">
-                          <label>Sort by</label>
-                          <select name="base_sort" id="base_sort"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
-                            <option value="">Select</option>
-                            <option value="profile_lastname">Lastname</option>
-                            <option value="profile_firstname">Firstname</option>
-                            <option value="user_id">ID</option>
-                          </select>
                         </div>
                       </div>
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group">
                           <label>Status</label>
                           <select name="status_flag" id="status_flag"  class="selectpicker" data-title="Select" data-style="btn-default btn-block" data-menu-style="dropdown-blue">
-                            <option value="">Select</option>
-                            <option value="1">On-line</option>
+                            <option value="1" selected>On-line</option>
                             <option value="0">Off-line</option>
                           </select>
                         </div>
@@ -244,19 +227,7 @@
                       <div class="col-md-3 col-sm-6">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Tags</label>
-                          <!--<select name="profile_interests" id="profile_interests" class="form-control">
-					  <option value="">Select</option>
-					  					  <option value="networking">Networking</option>
-					  					  <option value="foodie">Foodie</option>
-					  					  <option value="nightlife">Nightlife</option>
-					  					  <option value="tour">Tour</option>
-					  					  <option value="translator">Translator</option>
-					  					  <option value="wellness">Wellness</option>
-					  					  <option value="workout">Workout</option>
-					  					  <option value="professional">Professional</option>
-					  					  <option value="nearby">Nearby</option>
-					  					</select>-->
-                          <select multiple data-title="Multiple Select" name="profile_interests" class="selectpicker" data-style="btn-info btn-fill btn-block" data-menu-style="dropdown-blue" id="profile_interests">
+                          <select multiple data-title="Multiple Select" name="profile_interests" class="selectpicker" data-style="btn-info btn-block" data-menu-style="dropdown-blue" id="profile_interests">
                             <option value="networking">Networking</option>
                             <option value="foodie">Foodie</option>
                             <option value="nightlife">Nightlife</option>
@@ -284,543 +255,72 @@
               </div>
             </div>
           </div>
-          <div class="row ">
-            <div class="col-sm-3">
-              <div class="form-group">
-                <a class="btn btn-primary btn-block btn-fill" href="/en/user/create.html">
-                  <i class="pe-7s-plus"></i>&nbsp;Add User
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <a class="btn btn-danger btn-block btn-fill" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
-                  Delete
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <a class="btn btn-primary btn-block" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
-                  Export
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-offset-1 col-sm-2">
-              <select name="pageSize" id="pageSize-select" class="form-control">
-                <option value="25" selected="">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </div>
-          </div>
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <div class="content table-responsive table-full-width">
-                  <table class="table table-hover table-striped ">
-                    <thead>
-                    <th width="4%">
-                        <input id="" type="checkbox" name="" value="">
-                      </th>
-                      <th width="8%">ID</th>
-                      <th width="20%">Name</th>
-                      <th width="20%">Email</th>
-                      <th width="20%">Time of Registration</th>
-                      <th>Operation</th>
-                      
-                        </thead>
-                    <tbody>
-                      <!-- user entry -->
-                      <tr>
-                        <td>
-                          <input type="checkbox" name="subBox[]" value="">
-                        </td>
-                        <td>30011</td>
-                        <td>Dakota Rice</td>
-                        <td>mickalauskas_mathew@yahoo.com</td>
-                        <td>2016-05-03 17:04:10</td>
-                        <td>
-                          <a href="#" class="myOpen btn btn-primary btn-fill btn-sm">
-                            Edit
-                          </a>
-                          &nbsp;
-                          <a href="#myModal" role="button" class="myDel btn btn-danger btn-sm" data-type="2" data-userid="" data-toggle="modal">
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                      <!-- /user entry -->
-                      <!-- user entry -->
-                      <tr>
-                        <td>
-                          <input class="userCheck" type="checkbox" name="subBox[]" value="30010">
-                        </td>
-                        <td>30010</td>
-                        <td>Minerva Hooper</td>
-                        <td>justin.tubay@gmail.com</td>
-                        <td>2016-05-03 17:03:00</td>
-                        <td>
-                          <a href="#" class="myOpen btn btn-primary btn-fill btn-sm">
-                            Edit
-                          </a>
-                          &nbsp;
-                          <a href="#myModal" role="button" class="myDel btn btn-danger btn-sm" data-type="2" data-userid="" data-toggle="modal">
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                      <!-- /user entry -->
-                      
-                    </tbody>
-                  </table>
+                <div class="toolbar">
+                  <!--        Here you can write extra buttons/actions for the toolbar              -->
+                  <a class="btn btn-primary btn-fill" href="create.html">
+                    <i class="fa fa-plus"></i>&nbsp;Add User
+                  </a>
+                  &nbsp;
+                  
+                  <a rel="tooltip" title="Remove selected"  class="btn btn-danger table-action remove-selected btn-fill" href="javascript:void(0)">
+                    <i class="fa fa-trash"></i>&nbsp;Delete
+                  </a>
+                  &nbsp;
+                  
+                  <a class="btn btn-info" href="#myExport" role="button" data-type="2" data-url="/en/user/export.html" data-toggle="modal">
+                    <i class="fa fa-share-square-o"></i>&nbsp;Export
+                  </a>
                 </div>
-              </div>
-              <ul class="pagination">
-                <!--   
-                                                color-classes: "pagination-blue", "pagination-azure", "pagination-orange", "pagination-red", "pagination-green"       
-                                            -->
-                <li>
-                  <a href="#">
-                    «
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    1
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    2
-                  </a>
-                  <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
-                </li>
-                <li class="active">
-                  <a href="#">
-                    3
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    4
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    5
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    6
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    7
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    8
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    9
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    10
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    »
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="bootstrap-table">
-                  <div class="fixed-table-toolbar">
-                    <div class="bars pull-left">
-                      <div class="toolbar">
-                        <!--        Here you can write extra buttons/actions for the toolbar              -->
-                      </div>
-                    </div>
-                    <div class="columns columns-right pull-right">
-                      <button class="btn btn-default" type="button" name="refresh" title="Refresh"><i class="glyphicon fa fa-refresh"></i></button>
-                      <button class="btn btn-default" type="button" name="toggle" title="Toggle"><i class="glyphicon fa fa-th-list"></i></button>
-                      <div class="keep-open btn-group" title="Columns">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="glyphicon fa fa-columns"></i>
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li>
-                            <label>
-                              <input type="checkbox" data-field="id" value="1" checked="checked">
-                              ID</label>
-                          </li>
-                          <li>
-                            <label>
-                              <input type="checkbox" data-field="name" value="2" checked="checked">
-                              Name</label>
-                          </li>
-                          <li>
-                            <label>
-                              <input type="checkbox" data-field="email" value="3" checked="checked">
-                              Email</label>
-                          </li>
-                          <li>
-                            <label>
-                              <input type="checkbox" data-field="reg-time" value="4" checked="checked">
-                              Registration Time</label>
-                          </li>
-                          
-                          <li>
-                            <label>
-                              <input type="checkbox" data-field="actions" value="6" checked="checked">
-                              Actions</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="pull-left search">
-                      <input class="form-control" type="text" placeholder="Search">
-                      <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
-                    </div>
-                  </div>
-                  <div class="fixed-table-container" style="padding-bottom: 0px;">
-                    <div class="fixed-table-header" style="display: none;">
-                      <table>
-                      </table>
-                    </div>
-                    <div class="fixed-table-body">
-                      <div class="fixed-table-loading" style="top: 41px;">
-                        Loading, please wait...
-                      </div>
-                      <table id="bootstrap-table" class="table table-hover" style="margin-top: 0px;">
-                        <thead style="display: table-header-group;">
-                          <tr>
-                            <th class="bs-checkbox " style="width: 36px; " data-field="state">
-                              <div class="th-inner ">
-                                <input name="btSelectAll" type="checkbox">
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                            <th class="text-center" style="" data-field="id">
-                              <div class="th-inner ">
-                                ID
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                            <th style="" data-field="name">
-                              <div class="th-inner sortable both">
-                                Name
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                            <th style="" data-field="email">
-                              <div class="th-inner sortable both">
-                                Email
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                            <th style="" data-field="reg-time">
-                              <div class="th-inner sortable both asc">
-                                Time of Registration
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                            
-                            <th class="td-actions text-right" style="" data-field="actions">
-                              <div class="th-inner ">
-                                Actions
-                              </div>
-                              <div class="fht-cell">
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <!-- data-index -->
-                          <tr data-index="0">
-                            <td class="bs-checkbox">
-                              <!-- data-index -->
-                              <input data-index="0" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">30014</td>
-                            <td style="">Shana Mejia</td>
-                            <td style="">mickalauskas_mathew@yahoo.com</td>
-                            
-                            <td style="">2016-05-05 17:04:10</td>
-                            <td class="td-actions text-right" style="">
-                              <!-- Edit -->
-                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i> Edit
-                              </a>
-                              <!-- Delete -->
-                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i> Delete
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="1">
-                            <td class="bs-checkbox">
-                              <input data-index="1" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">30477</td>
-                            <td style="">Matthew Van Lingen</td>
-                            <td style="">mattvanlingen@yahoo.com</td>
-                            
-                            <td style="">2016-05-05 10:57:51</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i> Edit
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i> Delete
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="2">
-                            <td class="bs-checkbox">
-                              <input data-index="2" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">30474</td>
-                            <td style="">Bernie Sanders</td>
-                            <td style="">joshua.thies@gordon.edu</td>
-                            
-                            <td style="">2016-05-05 10:26:24</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-info btn-fill table-action view" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i> Edit
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-danger table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i> Delete
-                              </a>
-                            </td>
-                          </tr>
-                          <!--<tr data-index="2">
-                            <td class="bs-checkbox">
-                              <input data-index="2" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">6</td>
-                            <td style="">Mason Porter</td>
-                            <td style="">$78,615</td>
-                            <td style="">Chile</td>
-                            <td style="">Gloucester</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="3">
-                            <td class="bs-checkbox">
-                              <input data-index="3" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">12</td>
-                            <td style="">Josiah Simon</td>
-                            <td style="">$50,265</td>
-                            <td style="">Christmas Island</td>
-                            <td style="">Sint-Jans-Molenbeek</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="4">
-                            <td class="bs-checkbox">
-                              <input data-index="4" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">2</td>
-                            <td style="">Minerva Hooper</td>
-                            <td style="">$23,789</td>
-                            <td style="">Curaçao</td>
-                            <td style="">Sinaai-Waas</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="5">
-                            <td class="bs-checkbox">
-                              <input data-index="5" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">7</td>
-                            <td style="">Alden Chen</td>
-                            <td style="">$63,929</td>
-                            <td style="">Finland</td>
-                            <td style="">Gary</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="6">
-                            <td class="bs-checkbox">
-                              <input data-index="6" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">17</td>
-                            <td style="">Connor Wagner</td>
-                            <td style="">$86,537</td>
-                            <td style="">Germany</td>
-                            <td style="">Solihull</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr data-index="7">
-                            <td class="bs-checkbox">
-                              <input data-index="7" name="btSelectItem" type="checkbox">
-                            </td>
-                            <td class="text-center" style="">9</td>
-                            <td style="">Illana Nelson</td>
-                            <td style="">$56,142</td>
-                            <td style="">Heard Island</td>
-                            <td style="">Montone</td>
-                            <td class="td-actions text-right" style="">
-                              <a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">
-                                <i class="fa fa-edit"></i>
-                              </a>
-                              <a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">
-                                <i class="fa fa-remove"></i>
-                              </a>
-                            </td>
-                          </tr>-->
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="fixed-table-footer" style="display: none;">
-                      <table>
-                        <tbody>
-                          <tr></tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="fixed-table-pagination">
-                      <div class="pull-left pagination-detail">
-                        <span class="pagination-info"></span><span class="page-list"><span class="btn-group dropup">
-                        <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown"><span class="page-size">8</span>
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li class="active">
-                            <a href="javascript:void(0)">
-                              25
-                            </a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">
-                              50
-                            </a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">
-                              100
-                            </a>
-                          </li>
-                        </ul>
-                        </span> rows visible</span>
-                      </div>
-                      <div class="pull-right pagination">
-                        <ul class="pagination">
-                          <li class="page-first disabled">
-                            <a href="javascript:void(0)">
-                              «
-                            </a>
-                          </li>
-                          <li class="page-pre disabled">
-                            <a href="javascript:void(0)">
-                              ‹
-                            </a>
-                          </li>
-                          <li class="page-number active">
-                            <a href="javascript:void(0)">
-                              1
-                            </a>
-                          </li>
-                          <li class="page-number">
-                            <a href="javascript:void(0)">
-                              2
-                            </a>
-                          </li>
-                          <li class="page-number">
-                            <a href="javascript:void(0)">
-                              3
-                            </a>
-                          </li>
-                          <li class="page-next">
-                            <a href="javascript:void(0)">
-                              ›
-                            </a>
-                          </li>
-                          <li class="page-last">
-                            <a href="javascript:void(0)">
-                              »
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="clearfix">
-                </div>
+                <table id="bootstrap-table" class="table">
+                  <thead>
+                  <th data-field="state" data-checkbox="true"></th>
+                    <th data-field="id" class="text-center" data-sortable="true">ID</th>
+                    <th data-field="firstname" data-sortable="true">First Name</th>
+                    <th data-field="lastname" data-sortable="true">Last Name</th>
+                    <th data-field="email" data-sortable="true">Email</th>
+                    <th data-field="reg-time" data-sortable="true">Registration</th>
+                    <th data-field="actions" class="td-actions text-right" data-events="operateEvents" data-formatter="operateFormatter">Actions</th>
+                    
+                      </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>30489</td>
+                      <td>Miranda</td>
+                      <td>DeHart</td>
+                      <td>miranda.dehart189@gmail.com</td>
+                      <td>05/05/2016 11:39</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>30477</td>
+                      <td>Matthew</td>
+                      <td>Van Lingen</td>
+                      <td>mattvanlingen@yahoo.com</td>
+                      <td>05/05/2016 10:57</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>30474</td>
+                      <td>Bernie</td>
+                      <td>Sanders</td>
+                      <td>joshua.thies@gordon.edu</td>
+                      <td>05/05/2016 10:26</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <!--  end card  -->
             </div>
             <!-- end col-md-12 -->
           </div>
-          <!-- end card -->
+          <!-- end row -->
           
         </div>
       </div>
@@ -836,7 +336,7 @@
       </footer>
     </div>
   </div>
-</body>
+
 
 <!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
 <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
@@ -887,18 +387,111 @@
 
 <!--   Sharrre Library    -->
 <script src="../assets/js/jquery.sharrre.js"></script>
-
-<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
+<script src="../assets/js/showpassword.js"></script>
 <script type="text/javascript">
+        var $table = $('#bootstrap-table');
+
+        function operateFormatter(value, row, index) {
+            return [
+                '<a rel="tooltip" title="Edit" class="btn btn-sm btn-info btn-fill table-action edit" href="edit.html">',
+                    '<i class="fa fa-edit"></i> Edit',
+                '</a>&nbsp;',
+                '<a rel="tooltip" title="Delete" class="btn btn-sm btn-danger table-action remove" href="javascript:void(0)">',
+                    '<i class="fa fa-remove"></i> Delete',
+                    
+                '</a>',
+                
+            ].join('');
+        }
+   
         $().ready(function(){
+            window.operateEvents = {
+                'click .view': function (e, value, row, index) {
+                    info = JSON.stringify(row);
 
-            // Init Sliders
-            demo.initFormExtendedSliders();
+                    swal('You click view icon, row: ', info);
+                    console.log(info);
+                },
+//                'click .edit': function (e, value, row, index) {
+//                    info = JSON.stringify(row);
+//
+//                    swal('You click edit icon, row: ', info);
+//                    console.log(info);
+//                },
+                //'click .remove': function (e, value, row, index) {
+//                  
+//                    swal(
+//                          'Deleted!',
+//                          'Deletetion successful.',
+//                          'success'
+//                        );
+//                    console.log(row);
+//                    $table.bootstrapTable('remove', {
+//                        field: 'id',
+//                        values: [row.id]
+//                    });
+//                    
+//                },
+                'click .remove': function (e, value, row, index) {
+                    swal({
+                      title: 'Are you sure?',
+                      text: "You won't be able to revert this!",
+                      type: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Yes, delete it!'
+                    }).then(function(isConfirm) {
+                      if (isConfirm) {
+                        swal(
+                          'Deleted!',
+                          'Your file has been deleted.',
+                          'success'
+                        );
+                      }
+                    });
+                  },
+                
+            };
 
-            // Init DatetimePicker
-            demo.initFormExtendedDatetimepickers();
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+                clickToSelect: true,
+                showRefresh: true,
+                search: false,
+                showToggle: true,
+                showColumns: true,
+                pagination: true,
+                searchAlign: 'left',
+                pageSize: 25,
+                clickToSelect: false,
+                pageList: [25,50,100],
+
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..."
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + " rows visible";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+
+            //activate the tooltips after the data table is initialized
+            $('[rel="tooltip"]').tooltip();
+
+            $(window).resize(function () {
+                $table.bootstrapTable('resetView');
+            });
+
+
         });
+
     </script>
 <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -910,4 +503,5 @@
       ga('send', 'pageview');
 
     </script>
+    </body>
 </html>
